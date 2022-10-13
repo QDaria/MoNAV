@@ -15,7 +15,7 @@ kernelspec:
 # Intro Data Science Forum - Fake & Synthetic Data
 
 
-Med personvern  
+Med personvern   
 Å jobbe med data er vanskelig. Rådata byr vanligvis på flere utfordringer som må løses før du faktisk kan jobbe produktivt med dem. Noen ganger har du ikke nok data eller dataene har hull som må fylles. I mange tilfeller er det dyrt eller vanskelig å skaffe data på grunn av ytre forhold. I tillegg påvirker personvernbestemmelser måtene du kan bruke eller distribuere et datasett på. Av alle disse grunnene er bruk av syntetiske data et godt alternativ, siden det kan oppfylle de samme behovene med liten innsats.
 
 ```{admonition} Definition 

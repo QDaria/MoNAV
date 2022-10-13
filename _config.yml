@@ -23,7 +23,7 @@ execute:
     - '.DS_Store' 
     - '*pattern3withwildcard'
     - 'dsData.zip'
-    - 'programming-dp'
+#    - 'programming-dp'
 
 #######################################################################################
 # Parse and render settings

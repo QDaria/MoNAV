@@ -1,18 +1,5 @@
 {
   "overview": {
-    "sym_eq": {
-      "data": {
-        "text/latex": "$\\displaystyle \\left(\\sqrt{5} i\\right)^{\\alpha} \\left(\\frac{1}{2} - \\frac{2 \\sqrt{5} i}{5}\\right) + \\left(- \\sqrt{5} i\\right)^{\\alpha} \\left(\\frac{1}{2} + \\frac{2 \\sqrt{5} i}{5}\\right)$",
-        "text/plain": "(sqrt(5)*I)**\\alpha*(1/2 - 2*sqrt(5)*I/5) + (-sqrt(5)*I)**\\alpha*(1/2 + 2*sqrt(5)*I/5)"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "sym_eq"
-        }
-      },
-      "output_type": "display_data"
-    },
     "boot_mean": {
       "data": {
         "text/plain": "3.003002610498515"
@@ -21,6 +8,18 @@
         "scrapbook": {
           "mime_prefix": "",
           "name": "boot_mean"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "boot_clo": {
+      "data": {
+        "text/plain": "2.9905326339369425"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "boot_clo"
         }
       },
       "output_type": "display_data"
@@ -37,30 +36,6 @@
         },
         "filenames": {
           "image/png": "/Users/m0/Documents/GitHub/MoNAV/_build/jupyter_execute/overview_10_1.png"
-        }
-      },
-      "output_type": "display_data"
-    },
-    "boot_chi_notdisplayed": {
-      "data": {
-        "application/papermill.record/text/plain": "3.0154790011365917"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "application/papermill.record/",
-          "name": "boot_chi_notdisplayed"
-        }
-      },
-      "output_type": "display_data"
-    },
-    "boot_clo": {
-      "data": {
-        "text/plain": "2.9905326339369425"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "boot_clo"
         }
       },
       "output_type": "display_data"
@@ -102,6 +77,31 @@
         "scrapbook": {
           "mime_prefix": "",
           "name": "boot_chi"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "boot_chi_notdisplayed": {
+      "data": {
+        "application/papermill.record/text/plain": "3.0154790011365917"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "boot_chi_notdisplayed"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "sym_eq": {
+      "data": {
+        "text/latex": "$\\displaystyle \\left(\\sqrt{5} i\\right)^{\\alpha} \\left(\\frac{1}{2} - \\frac{2 \\sqrt{5} i}{5}\\right) + \\left(- \\sqrt{5} i\\right)^{\\alpha} \\left(\\frac{1}{2} + \\frac{2 \\sqrt{5} i}{5}\\right)$",
+        "text/plain": "(sqrt(5)*I)**\\alpha*(1/2 - 2*sqrt(5)*I/5) + (-sqrt(5)*I)**\\alpha*(1/2 + 2*sqrt(5)*I/5)"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "sym_eq"
         }
       },
       "output_type": "display_data"
