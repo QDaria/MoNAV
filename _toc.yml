@@ -1,0 +1,74 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+format: jb-book
+root: index
+parts:
+  - caption: Intro
+    numbered: True  # Only applies to chapters in Part 1.
+    chapters:
+    - file: intro
+    - file: overview
+    - file: prereq
+      sections:
+      - file: prenb
+      - file: ph 
+  - caption: Configurations
+    numbered: True   # Only applies to chapters in Part 1.
+    chapters:
+    - file: src/intro/0intro
+    - file: src/intro/setup
+      sections:
+      - file: src/intro/install
+      - file: src/intro/devman     
+  - caption: Oppfriskning & Oppslag
+    #numbered: False  # Only applies to chapters in Part 2.
+    chapters:
+    - file: src/opp/stats
+      sections:
+      - file: src/opp/ph0
+    - file: src/opp/data
+    - file: src/opp/ml
+    - file: src/opp/viz     
+    - file: src/opp/bp   
+  - caption: Data Science Forum
+    #numbered: False  # Only applies to chapters in Part 3.
+    chapters:
+    - file: src/dsforum/fake_synth/DSF_intro
+      sections:
+      - file: src/dsforum/fake_synth/ano
+      - file: src/dsforum/fake_synth/fake
+      - file: src/dsforum/fake_synth/synthetic
+      - file: src/dsforum/fake_synth/simulations
+      
+  - caption: Team Effekt
+    #numbered: False  # Only applies to chapters in Part 4.
+    chapters:
+    - file: src/effect/intro
+    - file: src/effect/ventetid
+    - file: src/effect/hypoteser
+
+  - caption: Testing
+    #numbered: False  # Only applies to chapters in Part 1.
+    chapters:
+    - file: src/test/markdown-notebooks
+      sections:
+      - file: src/test/markdown
+      - file: src/test/notebooks
+    - file: src/test/SynthNAV0
+    - file: src/test/SyntheticNAV
+ 
+#    - file: src/test/SynthNAV0
+
+#      sections:
+#      - file: effect/ph0
+
+#    - file: effect/hypoteser
+
+#  - caption: Team Effekt
+    #numbered: False  # Only applies to chapters in Part 5.
+#    chapters:
+#    - file: effect/intro
+#      sections:
+#      - file: effect/ph0
+#    - file: effect/hypoteser
+#    - file: effect/ventetid

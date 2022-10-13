@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Intro - Fake &amp; Synthetic Data &mdash; Daniel Mo Houshmand</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/sphinx-thebe.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/exercise.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+        <script src="../../../_static/tabs.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+        <script src="../../../_static/design-tabs.js"></script>
+        <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+        <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Fake" href="fake.html" />
+    <link rel="prev" title="Best Practices" href="../../opp/bp.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Python
+          
+
+          
+            
+            <img src="../../../_static/monav.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Welcome to your Jupyter Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Store code outputs and insert into content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../prereq.html">EffektTeam Effekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../prereq.html#prerequisites">Prerequisites</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configurations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/0intro.html">Introduksjon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Oppfriskning &amp; Oppslag</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../opp/stats.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opp/data.html">Data Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opp/ml.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opp/viz.html">Visualisation Tools &amp; Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opp/viz.html#dashboarding">Dashboarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opp/viz.html#mlops">MLOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opp/viz.html#exploratory-data-analysis-eda-tools">Exploratory Data Analysis (EDA) Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opp/bp.html">Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data Science Forum</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Intro - Fake &amp; Synthetic Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#definitions">Definitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fake.html">Fake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="synthetic.html">Syntetisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulations.html">Simulasjoner</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Effekt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../effect/intro.html">Intro POAO - Team Effekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../effect/intro.html#referanser">Referanser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../effect/ventetid.html">Ventetid</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Testing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../test/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test/SynthNAV0.html">DataSynthesizer (random mode)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test/SynthNAV0.html#datasynthesizer-usage-independent-attribute-mode">DataSynthesizer Usage (independent attribute mode)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test/SynthNAV0.html#datasynthesizer-usage-correlated-attribute-mode">DataSynthesizer Usage (correlated attribute mode)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test/SyntheticNAV.html">SyntheticNAV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test/SyntheticNAV.html#introduction">Introduction</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Intro - Fake &amp; Synthetic Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/src/dsforum/fake_synth/intro.md" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="tex2jax_ignore mathjax_ignore section" id="intro-fake-synthetic-data">
+<h1>Intro - Fake &amp; Synthetic Data<a class="headerlink" href="#intro-fake-synthetic-data" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://mostly.ai/blog/synthetic-data-generator-for-healthy-test-data/">Synthetic</a>
+<strong>Synthetic test data</strong>  is generated by AI, that is trained on real data. It is structurally representative, referential integer data with support for relational structures. AI-generated synthetic data is not mock data or fake data. It is as much a representation of the behavior of your customers as production data. It’s not generated manually, but by a powerful AI engine that is capable of learning all the qualities of the dataset it is trained on, providing 100% test coverage. A good quality synthetic data generator can automate test data generation with high efficiency and without privacy concerns. Customer data should always be used in its synthetic form to protect privacy and to retain business rules embedded in the data. For example, mobile banking apps should be tested with synthetic transaction data, that is based on real customer transactions.</p>
+<p>TL;DR
+Synthetic data generation methods changed significantly with the advance of AI
+AI-generated, sample-based synthetic data is an entirely different beast than random or mock data
+Types of AI-generated synthetic data include synthetic images, synthetic text, synthetic geolocation data, categorical, numerical and time-series data.
+Stochastic processes are still useful if you care about data structure but not content
+Rule-based systems can be used for simple use cases with low, fixed requirements toward complexity
+Use deep generative models to automatically retain structure as well as information of data at scale to unlock private data and reduce model-to-market time
+What the most common synthetic data types and their most common use cases are.
+An overview of data generation methods
+Not all synthetic dataset is created equal and in particular, synthetic data generation today is very different from what it was 5 years ago. Let’s take a look at different methods of synthetic data generation from the most rudimental forms to the state-of-the-art methods to see how far the technology has advanced! In this post we will distinguish between three major methods:</p>
+<p>The stochastic process: random data is generated, only mimicking the structure of real data.
+Rule-based data generation: mock data is generated following specific rules defined by humans.
+Deep generative models: rich and realistic synthetic data is generated by a machine learning model trained on real data, replicating its structure and the information it contains.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="definitions">
+<h1>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h1>
+<p>SMOTE (Synthetic Minority Oversampling Technique) to deal with imbalanced classes in a dataset.</p>
+<p>Another well-known technique is called SMOTE, which involves data augmentation (i.e., synthesizing new data samples) well before you use a clas- sification algorithm. SMOTE was initially developed by means of the kNN algorithm (other options are available), and it can be an effective technique for handling imbalanced classes.
+Yet another option to consider is the Python package imbalanced-learn in the scikit-learn-contrib project. This project provides various re-sampling techniques for datasets that exhibit class imbalance. More details are available online:
+https://github.com/scikit-learn-contrib/imbalanced-learn.
+https://www.datprof.com/solutions/synthetic-test-data-generation/</p>
+<p>https://mostly.ai/wp-content/uploads/2021/09/MOSTLY-AI_comparison_of_synthetic_data_types_2-1-1024x724.png</p>
+<p>WHAT IS SMOTE?
+SMOTE is a technique for synthesizing new samples for a dataset. This tech- nique is based on linear interpolation:
+Step 1: Select samples that are close in the feature space.
+Step 2: Draw a line between the samples in the feature space.
+Step 3: Draw a new sample at a point along that line.
+A more detailed explanation of the SMOTE algorithm is as follows:
+Select a random sample “a” from the minority class.
+Find k nearest neighbors for that example.
+Select a random neighbor “b” from the nearest neighbors.
+Create a line “L” that connects “a” and “b.”
+Randomly select one or more points “c” on line L.
+If need be, you can repeat this process for the other (k-1) nearest neigh- bors to distribute the synthetic values more evenly among the nearest neighbors.
+SMOTE Extensions
+The initial SMOTE algorithm is based on the kNN classification algorithm, which has been extended in various ways, such as replacing kNN with SVM. A list of SMOTE extensions is shown as follows:
+selective synthetic sample generation
+Borderline-SMOTE (kNN)
+Borderline-SMOTE (SVM)
+Adaptive Synthetic Sampling (ADASYN)</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src/dsforum/fake_synth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="fake.html" class="btn btn-neutral float-right" title="Fake" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../opp/bp.html" class="btn btn-neutral float-left" title="Best Practices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
