@@ -50,6 +50,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
         <script src="../../../_static/design-tabs.js"></script>
         <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -232,12 +233,33 @@ const thebe_selector_output = ".output, .cell_output"
             
   <div class="tex2jax_ignore mathjax_ignore section" id="intro-data-science-forum-fake-synthetic-data">
 <h1>Intro Data Science Forum - Fake &amp; Synthetic Data<a class="headerlink" href="#intro-data-science-forum-fake-synthetic-data" title="Permalink to this headline">¶</a></h1>
-<p>Med personvern<br />
+<p><img alt="title" src="%22https://mostly.ai/wp-content/uploads/2021/09/MOSTLY-AI_comparison_of_synthetic_data_types_2-1-1024x724.png%22" /></p>
+<img alt="alternatetext" src="https://mostly.ai/wp-content/uploads/2021/09/MOSTLY-AI_comparison_of_synthetic_data_types_2-1-1024x724.png" />
+<p>Personvern blir stadig viktigere i dagens samfunn, og med GDPR har betydningen blitt enda større. Dette har ført til et økt behov for generering av syntetisk data for bruk i testing av nye løsninger. Men hva innebærer det egentlig å generere representativ syntetisk data som testere kan bruke, og som er i henhold til personlovgivningen? Kom og hør på vår lyntale om hvordan vi løste denne problemstillingen i<br />
 Å jobbe med data er vanskelig. Rådata byr vanligvis på flere utfordringer som må løses før du faktisk kan jobbe produktivt med dem. Noen ganger har du ikke nok data eller dataene har hull som må fylles. I mange tilfeller er det dyrt eller vanskelig å skaffe data på grunn av ytre forhold. I tillegg påvirker personvernbestemmelser måtene du kan bruke eller distribuere et datasett på. Av alle disse grunnene er bruk av syntetiske data et godt alternativ, siden det kan oppfylle de samme behovene med liten innsats.</p>
+<p>Hva er syntetiske data?
+I henhold til definisjonen satt av Storbritannias Office for National Statistics (ONS):</p>
+<p>“Syntetiske data er mikrodataposter opprettet for å forbedre dataverktøyet og samtidig forhindre avsløring av konfidensiell respondentinformasjon. Syntetiske data lages ved å statistisk modellere originaldata, og deretter bruke disse modellene til å generere nye dataverdier som reproduserer de originale dataenes statistiske egenskaper. Brukere er ikke i stand til å identifisere informasjonen til enhetene som ga de originale dataene.”</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>“Syntetiske data er mikrodataposter opprettet for å forbedre dataverktøyet og samtidig forhindre avsløring av konfidensiell respondentinformasjon. Syntetiske data lages ved å statistisk modellere originaldata og deretter bruke disse modellene til å generere nye dataverdier som reproduserer de originale dataenes statistiske egenskaper. Brukere er ikke i stand til å identifisere informasjonen til enhetene som ga de originale dataene.”</p>
 </div>
+<p>Således har syntetiske data følgende tre viktige egenskaper:</p>
+<ul class="simple">
+<li><p>Syntetiske data lages fra en statistisk modell.</p></li>
+<li><p>De statistiske egenskapene til syntetiske data bør være lik de originale dataene.</p></li>
+<li><p>Syntetiske data skal anonymiseres.</p></li>
+</ul>
+<p>ONS-metodikken gir også en skala for å evaluere modenheten til et syntetisk datasett. Denne skalaen vurderer hvor mye de syntetiske dataene ligner de originale dataene, formålet og risikoen for avsløring. Metodikken inkluderer:</p>
+<ul class="simple">
+<li><p>Syntetisk strukturell: bevarer strukturen til de originale dataene, noe som er nyttig for å teste kode.</p></li>
+<li><p>Syntetisk gyldig: bevarer ikke bare strukturen, men returnerer også verdier som er plausible i konteksten til datasettet. Du bør introdusere manglende verdikoder, feil og inkonsekvenser for å replikere de originale dataene.</p></li>
+<li><p>Syntetisk utvidet plausibel: replikerer distribusjonene til hvert datautvalg der det er mulig uten å ta hensyn til forholdet mellom forskjellige kolonner (univariat).</p></li>
+<li><p>Syntetisk utvidet multivariat plausibel: replikerer relasjoner på høyt nivå med plausible fordelinger (multivariat).</p></li>
+<li><p>Syntetisk utvidet multivariat detaljert: replikerer detaljerte forhold. For denne må du utføre evaluering av informasjonskontroll fra sak til sak.</p></li>
+<li><p>Syntetisk forsterket replika: gir nærmest mulig replikering. Det er avgjørende å utføre evaluering av avsløringskontroll fra sak til sak.</p></li>
+</ul>
+<p>Hvert av de følgende bibliotekene bruker forskjellige tilnærminger til å generere syntetiske data. Noen fokuserer på å gi kun de syntetiske dataene i seg selv, men andre gir et komplett sett med verktøy som tar sikte på å oppnå den syntetisk utvidede replikaen beskrevet ovenfor.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The next info should be nested</p>

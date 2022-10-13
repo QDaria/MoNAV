@@ -14,13 +14,39 @@ kernelspec:
 ---
 # Intro Data Science Forum - Fake & Synthetic Data
 
+![title]("https://mostly.ai/wp-content/uploads/2021/09/MOSTLY-AI_comparison_of_synthetic_data_types_2-1-1024x724.png")
 
-Med personvern  
+<img src="https://mostly.ai/wp-content/uploads/2021/09/MOSTLY-AI_comparison_of_synthetic_data_types_2-1-1024x724.png" alt="alternatetext">
+
+Personvern blir stadig viktigere i dagens samfunn, og med GDPR har betydningen blitt enda større. Dette har ført til et økt behov for generering av syntetisk data for bruk i testing av nye løsninger. Men hva innebærer det egentlig å generere representativ syntetisk data som testere kan bruke, og som er i henhold til personlovgivningen? Kom og hør på vår lyntale om hvordan vi løste denne problemstillingen i  
 Å jobbe med data er vanskelig. Rådata byr vanligvis på flere utfordringer som må løses før du faktisk kan jobbe produktivt med dem. Noen ganger har du ikke nok data eller dataene har hull som må fylles. I mange tilfeller er det dyrt eller vanskelig å skaffe data på grunn av ytre forhold. I tillegg påvirker personvernbestemmelser måtene du kan bruke eller distribuere et datasett på. Av alle disse grunnene er bruk av syntetiske data et godt alternativ, siden det kan oppfylle de samme behovene med liten innsats.
+
+Hva er syntetiske data?
+I henhold til definisjonen satt av Storbritannias Office for National Statistics (ONS):
+
+"Syntetiske data er mikrodataposter opprettet for å forbedre dataverktøyet og samtidig forhindre avsløring av konfidensiell respondentinformasjon. Syntetiske data lages ved å statistisk modellere originaldata, og deretter bruke disse modellene til å generere nye dataverdier som reproduserer de originale dataenes statistiske egenskaper. Brukere er ikke i stand til å identifisere informasjonen til enhetene som ga de originale dataene."
 
 ```{admonition} Definition 
 "Syntetiske data er mikrodataposter opprettet for å forbedre dataverktøyet og samtidig forhindre avsløring av konfidensiell respondentinformasjon. Syntetiske data lages ved å statistisk modellere originaldata og deretter bruke disse modellene til å generere nye dataverdier som reproduserer de originale dataenes statistiske egenskaper. Brukere er ikke i stand til å identifisere informasjonen til enhetene som ga de originale dataene."
 ```
+
+Således har syntetiske data følgende tre viktige egenskaper:
+
+* Syntetiske data lages fra en statistisk modell.
+* De statistiske egenskapene til syntetiske data bør være lik de originale dataene.
+* Syntetiske data skal anonymiseres.
+
+
+ONS-metodikken gir også en skala for å evaluere modenheten til et syntetisk datasett. Denne skalaen vurderer hvor mye de syntetiske dataene ligner de originale dataene, formålet og risikoen for avsløring. Metodikken inkluderer:
+
+- Syntetisk strukturell: bevarer strukturen til de originale dataene, noe som er nyttig for å teste kode.
+- Syntetisk gyldig: bevarer ikke bare strukturen, men returnerer også verdier som er plausible i konteksten til datasettet. Du bør introdusere manglende verdikoder, feil og inkonsekvenser for å replikere de originale dataene.
+- Syntetisk utvidet plausibel: replikerer distribusjonene til hvert datautvalg der det er mulig uten å ta hensyn til forholdet mellom forskjellige kolonner (univariat).
+- Syntetisk utvidet multivariat plausibel: replikerer relasjoner på høyt nivå med plausible fordelinger (multivariat).
+- Syntetisk utvidet multivariat detaljert: replikerer detaljerte forhold. For denne må du utføre evaluering av informasjonskontroll fra sak til sak.
+- Syntetisk forsterket replika: gir nærmest mulig replikering. Det er avgjørende å utføre evaluering av avsløringskontroll fra sak til sak.
+
+Hvert av de følgende bibliotekene bruker forskjellige tilnærminger til å generere syntetiske data. Noen fokuserer på å gi kun de syntetiske dataene i seg selv, men andre gir et komplett sett med verktøy som tar sikte på å oppnå den syntetisk utvidede replikaen beskrevet ovenfor.
 
 ````{note}
 The next info should be nested

@@ -23,7 +23,7 @@ execute:
     - '.DS_Store' 
     - '*pattern3withwildcard'
     - 'dsData.zip'
-    - 'programming-dp'
+#    - 'programming-dp'
 
 #######################################################################################
 # Parse and render settings
@@ -99,8 +99,10 @@ sphinx:
     #html_theme: quantecon_book_theme
     pygments_style: one-dark
     html_title: Daniel Mo Houshmand
-    html_static_path: ../_static
+    html_static_path: /Users/m0/Documents/GitHub/MoNAV/_build/html/_static
+    #/Users/m0/Documents/GitHub/MoNAV/_build/html/index.html
     # CSS files
     html_css_files: custom.css
     # JS files
-    #html_js_files: custom.js
+    html_js_files:
+    - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
