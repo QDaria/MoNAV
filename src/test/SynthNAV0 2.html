@@ -1,0 +1,820 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>DataSynthesizer (random mode) &mdash; Daniel Mo Houshmand</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx-thebe.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/exercise.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+        <script src="../../_static/tabs.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+        <script src="../../_static/design-tabs.js"></script>
+        <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+        <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SyntheticNAV" href="SyntheticNAV.html" />
+    <link rel="prev" title="Content with notebooks" href="notebooks.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Python
+          
+
+          
+            
+            <img src="../../_static/monav.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Welcome to your Jupyter Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Store code outputs and insert into content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prereq.html">EffektTeam Effekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prereq.html#prerequisites">Prerequisites</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Configurations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/0intro.html">Introduksjon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/setup.html">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Oppfriskning &amp; Oppslag</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../opp/stats.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opp/data.html">Data Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opp/ml.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opp/viz.html">Visualisation Tools &amp; Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opp/viz.html#dashboarding">Dashboarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opp/viz.html#mlops">MLOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opp/viz.html#exploratory-data-analysis-eda-tools">Exploratory Data Analysis (EDA) Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opp/bp.html">Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data Science Forum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dsforum/fake_synth/intro.html">Intro - Fake &amp; Synthetic Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dsforum/fake_synth/intro.html#definitions">Definitions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Effekt</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../effect/intro.html">Intro POAO - Team Effekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../effect/intro.html#referanser">Referanser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../effect/ventetid.html">Ventetid</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Testing</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DataSynthesizer (random mode)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#datasynthesizer-usage-independent-attribute-mode">DataSynthesizer Usage (independent attribute mode)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#datasynthesizer-usage-correlated-attribute-mode">DataSynthesizer Usage (correlated attribute mode)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SyntheticNAV.html">SyntheticNAV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SyntheticNAV.html#introduction">Introduction</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>DataSynthesizer (random mode)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/src/test/SynthNAV0.ipynb" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="tex2jax_ignore mathjax_ignore section" id="datasynthesizer-random-mode">
+<h1>DataSynthesizer (random mode)<a class="headerlink" href="#datasynthesizer-random-mode" title="Permalink to this headline">¶</a></h1>
+<p>DataSynthesizer generates synthetic data that simulates a given dataset.</p>
+<p>It aims to facilitate the collaborations between data scientists and owners of sensitive data. It applies Differential Privacy techniques to achieve strong privacy guarantee.
+#https://github.com/DataResponsibly/DataSynthesizer/blob/master/docs/cr-datasynthesizer-privacy.pdf</p>
+<div class="section" id="step-1-import-packages">
+<h2>Step 1 import packages<a class="headerlink" href="#step-1-import-packages" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">DataSynthesizer.DataDescriber</span> <span class="kn">import</span> <span class="n">DataDescriber</span>
+<span class="kn">from</span> <span class="nn">DataSynthesizer.DataGenerator</span> <span class="kn">import</span> <span class="n">DataGenerator</span>
+<span class="kn">from</span> <span class="nn">DataSynthesizer.ModelInspector</span> <span class="kn">import</span> <span class="n">ModelInspector</span>
+<span class="kn">from</span> <span class="nn">DataSynthesizer.lib.utils</span> <span class="kn">import</span> <span class="n">read_json_file</span><span class="p">,</span> <span class="n">display_bayesian_network</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># help(DataDescriber)</span>
+<span class="c1">#print(dir(DataDescriber))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">DataDescriber</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5303097408
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hasattr(obj, name)</span>
+<span class="c1"># obj is the object under inspection.</span>
+<span class="c1"># name is the name (as a string) of the possible attribute.</span>
+<span class="nb">hasattr</span><span class="p">(</span><span class="n">DataDescriber</span><span class="p">,</span> <span class="s2">&quot;type(int)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-2-user-defined-parameteres">
+<h2>Step 2 user-defined parameteres<a class="headerlink" href="#step-2-user-defined-parameteres" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># input dataset</span>
+<span class="c1">#input_data = &#39;./data/adult_ssn.csv&#39;</span>
+<span class="n">input_data</span> <span class="o">=</span> <span class="s1">&#39;/Users/m0/Documents/GitHub/MoHoushmand.github.io/DATA/data/adult_ssn.csv&#39;</span>
+<span class="c1"># location of two output files</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;random_mode&#39;</span>
+<span class="c1">#description_file =  f&#39;.DATA/out/{mode}/description.json&#39;</span>
+<span class="n">description_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;/Users/m0/Documents/GitHub/MoHoushmand.github.io/DATA/out/</span><span class="si">{</span><span class="n">mode</span><span class="si">}</span><span class="s1">/description.json&#39;</span>
+<span class="c1">#synthetic_data = f&#39;.DATA/out/{mode}/sythetic_data.csv&#39;</span>
+<span class="n">synthetic_data</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;/Users/m0/Documents/GitHub/MoHoushmand.github.io/DATA/out/</span><span class="si">{</span><span class="n">mode</span><span class="si">}</span><span class="s1">/sythetic_data.csv&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An attribute is categorical if its domain size is less than this threshold.</span>
+<span class="c1"># Here modify the threshold to adapt to the domain size of &quot;education&quot; (which is 14 in input dataset).</span>
+<span class="n">threshold_value</span> <span class="o">=</span> <span class="mi">20</span> 
+
+<span class="c1"># Number of tuples generated in synthetic dataset.</span>
+<span class="n">num_tuples_to_generate</span> <span class="o">=</span> <span class="mi">32561</span> <span class="c1"># Here 32561 is the same as input dataset, but it can be set to another number.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-3-datadescriber">
+<h2>Step 3 DataDescriber<a class="headerlink" href="#step-3-datadescriber" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Instantiate a DataDescriber.</p></li>
+<li><p>Compute the statistics of the dataset.</p></li>
+<li><p>Save dataset description to a file on local machine.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">describer</span> <span class="o">=</span> <span class="n">DataDescriber</span><span class="p">(</span><span class="n">category_threshold</span><span class="o">=</span><span class="n">threshold_value</span><span class="p">)</span>
+<span class="n">describer</span><span class="o">.</span><span class="n">describe_dataset_in_random_mode</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
+<span class="n">describer</span><span class="o">.</span><span class="n">save_dataset_description_to_file</span><span class="p">(</span><span class="n">description_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-4-generate-synthetic-dataset">
+<h2>Step 4 generate synthetic dataset<a class="headerlink" href="#step-4-generate-synthetic-dataset" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Instantiate a DataGenerator.</p></li>
+<li><p>Generate a synthetic dataset.</p></li>
+<li><p>Save it to local machine.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generator</span> <span class="o">=</span> <span class="n">DataGenerator</span><span class="p">()</span>
+<span class="n">generator</span><span class="o">.</span><span class="n">generate_dataset_in_random_mode</span><span class="p">(</span><span class="n">num_tuples_to_generate</span><span class="p">,</span> <span class="n">description_file</span><span class="p">)</span>
+<span class="n">generator</span><span class="o">.</span><span class="n">save_synthetic_data</span><span class="p">(</span><span class="n">synthetic_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-5-compare-the-statistics-of-input-and-sythetic-data-optional">
+<h2>Step 5 compare the statistics of input and sythetic data (optional)<a class="headerlink" href="#step-5-compare-the-statistics-of-input-and-sythetic-data-optional" title="Permalink to this headline">¶</a></h2>
+<p>The synthetic data is already saved in a file by step 4. The ModelInspector is for a quick test on the similarity between input and synthetic datasets.</p>
+<div class="section" id="instantiate-a-modelinspector">
+<h3>5.1 instantiate a ModelInspector.<a class="headerlink" href="#instantiate-a-modelinspector" title="Permalink to this headline">¶</a></h3>
+<p>It needs input dataset, synthetic dataset, and attribute description.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read both datasets using Pandas.</span>
+<span class="n">input_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">synthetic_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">synthetic_data</span><span class="p">)</span>
+<span class="c1"># Read attribute description from the dataset description file.</span>
+<span class="n">attribute_description</span> <span class="o">=</span> <span class="n">read_json_file</span><span class="p">(</span><span class="n">description_file</span><span class="p">)[</span><span class="s1">&#39;attribute_description&#39;</span><span class="p">]</span>
+
+<span class="n">inspector</span> <span class="o">=</span> <span class="n">ModelInspector</span><span class="p">(</span><span class="n">input_df</span><span class="p">,</span> <span class="n">synthetic_df</span><span class="p">,</span> <span class="n">attribute_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compare-histograms-between-input-and-synthetic-datasets">
+<h3>5.2 compare histograms between input and synthetic datasets.<a class="headerlink" href="#compare-histograms-between-input-and-synthetic-datasets" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">synthetic_df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">inspector</span><span class="o">.</span><span class="n">compare_histograms</span><span class="p">(</span><span class="n">attribute</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+</pre></div>
+</div>
+<img alt="../../_images/SynthNAV0_17_1.png" src="../../_images/SynthNAV0_17_1.png" />
+<img alt="../../_images/SynthNAV0_17_2.png" src="../../_images/SynthNAV0_17_2.png" />
+<img alt="../../_images/SynthNAV0_17_3.png" src="../../_images/SynthNAV0_17_3.png" />
+<img alt="../../_images/SynthNAV0_17_4.png" src="../../_images/SynthNAV0_17_4.png" />
+<img alt="../../_images/SynthNAV0_17_5.png" src="../../_images/SynthNAV0_17_5.png" />
+<img alt="../../_images/SynthNAV0_17_6.png" src="../../_images/SynthNAV0_17_6.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inspector</span><span class="o">.</span><span class="n">mutual_information_heatmap</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/SynthNAV0_18_0.png" src="../../_images/SynthNAV0_18_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="datasynthesizer-usage-independent-attribute-mode">
+<h1>DataSynthesizer Usage (independent attribute mode)<a class="headerlink" href="#datasynthesizer-usage-independent-attribute-mode" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Step 1 import packages<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id2">
+<h2>Step 2 user-defined parameteres<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># location of two output files</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;independent_attribute_mode&#39;</span>
+<span class="n">description_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;/Users/m0/Documents/GitHub/MoHoushmand.github.io/DATA/out/</span><span class="si">{</span><span class="n">mode</span><span class="si">}</span><span class="s1">/description.json&#39;</span>
+<span class="n">synthetic_data</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;/Users/m0/Documents/GitHub/MoHoushmand.github.io/DATA/out/</span><span class="si">{</span><span class="n">mode</span><span class="si">}</span><span class="s1">/sythetic_data.csv&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An attribute is categorical if its domain size is less than this threshold.</span>
+<span class="c1"># Here modify the threshold to adapt to the domain size of &quot;education&quot; (which is 14 in input dataset).</span>
+<span class="n">threshold_value</span> <span class="o">=</span> <span class="mi">20</span> 
+
+<span class="c1"># specify categorical attributes</span>
+<span class="n">categorical_attributes</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;education&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+
+<span class="c1"># specify which attributes are candidate keys of input dataset.</span>
+<span class="n">candidate_keys</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+
+<span class="c1"># Number of tuples generated in synthetic dataset.</span>
+<span class="n">num_tuples_to_generate</span> <span class="o">=</span> <span class="mi">32561</span> <span class="c1"># Here 32561 is the same as input dataset, but it can be set to another number.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Step 3 DataDescriber<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Instantiate a DataDescriber.</p></li>
+<li><p>Compute the statistics of the dataset.</p></li>
+<li><p>Save dataset description to a file on local machine.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">describer</span> <span class="o">=</span> <span class="n">DataDescriber</span><span class="p">(</span><span class="n">category_threshold</span><span class="o">=</span><span class="n">threshold_value</span><span class="p">)</span>
+<span class="n">describer</span><span class="o">.</span><span class="n">describe_dataset_in_independent_attribute_mode</span><span class="p">(</span><span class="n">dataset_file</span><span class="o">=</span><span class="n">input_data</span><span class="p">,</span>
+                                                         <span class="n">attribute_to_is_categorical</span><span class="o">=</span><span class="n">categorical_attributes</span><span class="p">,</span>
+                                                         <span class="n">attribute_to_is_candidate_key</span><span class="o">=</span><span class="n">candidate_keys</span><span class="p">)</span>
+<span class="n">describer</span><span class="o">.</span><span class="n">save_dataset_description_to_file</span><span class="p">(</span><span class="n">description_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Step 4 generate synthetic dataset<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Instantiate a DataGenerator.</p></li>
+<li><p>Generate a synthetic dataset.</p></li>
+<li><p>Save it to local machine.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generator</span> <span class="o">=</span> <span class="n">DataGenerator</span><span class="p">()</span>
+<span class="n">generator</span><span class="o">.</span><span class="n">generate_dataset_in_independent_mode</span><span class="p">(</span><span class="n">num_tuples_to_generate</span><span class="p">,</span> <span class="n">description_file</span><span class="p">)</span>
+<span class="n">generator</span><span class="o">.</span><span class="n">save_synthetic_data</span><span class="p">(</span><span class="n">synthetic_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Step 5 compare the statistics of input and sythetic data (optional)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>The synthetic data is already saved in a file by step 4. The ModelInspector is for a quick test on the similarity between input and synthetic datasets.</p>
+</div>
+<div class="section" id="id6">
+<h2>5.1 instantiate a ModelInspector.<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>It needs input dataset, synthetic dataset, and attribute description.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read both datasets using Pandas.</span>
+<span class="n">input_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">synthetic_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">synthetic_data</span><span class="p">)</span>
+<span class="c1"># Read attribute description from the dataset description file.</span>
+<span class="n">attribute_description</span> <span class="o">=</span> <span class="n">read_json_file</span><span class="p">(</span><span class="n">description_file</span><span class="p">)[</span><span class="s1">&#39;attribute_description&#39;</span><span class="p">]</span>
+
+<span class="n">inspector</span> <span class="o">=</span> <span class="n">ModelInspector</span><span class="p">(</span><span class="n">input_df</span><span class="p">,</span> <span class="n">synthetic_df</span><span class="p">,</span> <span class="n">attribute_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>5.2 compare histograms between input and synthetic datasets.<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">synthetic_df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">inspector</span><span class="o">.</span><span class="n">compare_histograms</span><span class="p">(</span><span class="n">attribute</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+</pre></div>
+</div>
+<img alt="../../_images/SynthNAV0_31_1.png" src="../../_images/SynthNAV0_31_1.png" />
+<img alt="../../_images/SynthNAV0_31_2.png" src="../../_images/SynthNAV0_31_2.png" />
+<img alt="../../_images/SynthNAV0_31_3.png" src="../../_images/SynthNAV0_31_3.png" />
+<img alt="../../_images/SynthNAV0_31_4.png" src="../../_images/SynthNAV0_31_4.png" />
+<img alt="../../_images/SynthNAV0_31_5.png" src="../../_images/SynthNAV0_31_5.png" />
+<img alt="../../_images/SynthNAV0_31_6.png" src="../../_images/SynthNAV0_31_6.png" />
+</div>
+</div>
+</div>
+<div class="section" id="compare-pairwise-mutual-information">
+<h2>5.3 compare pairwise mutual information<a class="headerlink" href="#compare-pairwise-mutual-information" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inspector</span><span class="o">.</span><span class="n">mutual_information_heatmap</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/SynthNAV0_33_0.png" src="../../_images/SynthNAV0_33_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="datasynthesizer-usage-correlated-attribute-mode">
+<h1>DataSynthesizer Usage (correlated attribute mode)<a class="headerlink" href="#datasynthesizer-usage-correlated-attribute-mode" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id8">
+<h2>Step 1 import packages<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id9">
+<h2>Step 2 user-defined parameteres<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># location of two output files</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;correlated_attribute_mode&#39;</span>
+<span class="n">description_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;/Users/m0/Documents/GitHub/MoHoushmand.github.io/DATA/out/</span><span class="si">{</span><span class="n">mode</span><span class="si">}</span><span class="s1">/description.json&#39;</span>
+<span class="n">synthetic_data</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;/Users/m0/Documents/GitHub/MoHoushmand.github.io/DATA/out/</span><span class="si">{</span><span class="n">mode</span><span class="si">}</span><span class="s1">/sythetic_data.csv&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An attribute is categorical if its domain size is less than this threshold.</span>
+<span class="c1"># Here modify the threshold to adapt to the domain size of &quot;education&quot; (which is 14 in input dataset).</span>
+<span class="n">threshold_value</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># specify categorical attributes</span>
+<span class="n">categorical_attributes</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;education&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+
+<span class="c1"># specify which attributes are candidate keys of input dataset.</span>
+<span class="n">candidate_keys</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ssn&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+
+<span class="c1"># A parameter in Differential Privacy. It roughly means that removing a row in the input dataset will not </span>
+<span class="c1"># change the probability of getting the same output more than a multiplicative difference of exp(epsilon).</span>
+<span class="c1"># Increase epsilon value to reduce the injected noises. Set epsilon=0 to turn off differential privacy.</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># The maximum number of parents in Bayesian network, i.e., the maximum number of incoming edges.</span>
+<span class="n">degree_of_bayesian_network</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># Number of tuples generated in synthetic dataset.</span>
+<span class="n">num_tuples_to_generate</span> <span class="o">=</span> <span class="mi">1000</span> <span class="c1"># Here 32561 is the same as input dataset, but it can be set to another number.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Step 3 DataDescriber<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>Instantiate a DataDescriber.
+Compute the statistics of the dataset.
+Save dataset description to a file on local machine.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">describer</span> <span class="o">=</span> <span class="n">DataDescriber</span><span class="p">(</span><span class="n">category_threshold</span><span class="o">=</span><span class="n">threshold_value</span><span class="p">)</span>
+<span class="n">describer</span><span class="o">.</span><span class="n">describe_dataset_in_correlated_attribute_mode</span><span class="p">(</span><span class="n">dataset_file</span><span class="o">=</span><span class="n">input_data</span><span class="p">,</span> 
+                                                        <span class="n">epsilon</span><span class="o">=</span><span class="n">epsilon</span><span class="p">,</span> 
+                                                        <span class="n">k</span><span class="o">=</span><span class="n">degree_of_bayesian_network</span><span class="p">,</span>
+                                                        <span class="n">attribute_to_is_categorical</span><span class="o">=</span><span class="n">categorical_attributes</span><span class="p">,</span>
+                                                        <span class="n">attribute_to_is_candidate_key</span><span class="o">=</span><span class="n">candidate_keys</span><span class="p">)</span>
+<span class="n">describer</span><span class="o">.</span><span class="n">save_dataset_description_to_file</span><span class="p">(</span><span class="n">description_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================ Constructing Bayesian Network (BN) ================
+Adding ROOT relationship
+Adding attribute marital-status
+Adding attribute age
+Adding attribute sex
+Adding attribute education
+Adding attribute income
+========================== BN constructed ==========================
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/lib/PrivBayes.py:275: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don&#39;t supply a list with a single grouper to avoid this warning.
+  for parents_instance, stats_sub in stats.groupby(parents):
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>Step 4 generate synthetic dataset<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Instantiate a DataGenerator.</p></li>
+<li><p>Generate a synthetic dataset.</p></li>
+<li><p>Save it to local machine.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generator</span> <span class="o">=</span> <span class="n">DataGenerator</span><span class="p">()</span>
+<span class="n">generator</span><span class="o">.</span><span class="n">generate_dataset_in_correlated_attribute_mode</span><span class="p">(</span><span class="n">num_tuples_to_generate</span><span class="p">,</span> <span class="n">description_file</span><span class="p">)</span>
+<span class="n">generator</span><span class="o">.</span><span class="n">save_synthetic_data</span><span class="p">(</span><span class="n">synthetic_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>Step 5 compare the statistics of input and sythetic data (optional)<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>The synthetic data is already saved in a file by step 4. The ModelInspector is for a quick test on the similarity between input and synthetic datasets.</p>
+</div>
+<div class="section" id="id13">
+<h2>5.1 instantiate a ModelInspector.<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p>It needs input dataset, synthetic dataset, and attribute description</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read both datasets using Pandas.</span>
+<span class="n">input_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">synthetic_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">synthetic_data</span><span class="p">)</span>
+<span class="c1"># Read attribute description from the dataset description file.</span>
+<span class="n">attribute_description</span> <span class="o">=</span> <span class="n">read_json_file</span><span class="p">(</span><span class="n">description_file</span><span class="p">)[</span><span class="s1">&#39;attribute_description&#39;</span><span class="p">]</span>
+
+<span class="n">inspector</span> <span class="o">=</span> <span class="n">ModelInspector</span><span class="p">(</span><span class="n">input_df</span><span class="p">,</span> <span class="n">synthetic_df</span><span class="p">,</span> <span class="n">attribute_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>5.2 compare histograms between input and synthetic datasets.<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">synthetic_df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">inspector</span><span class="o">.</span><span class="n">compare_histograms</span><span class="p">(</span><span class="n">attribute</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:82: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_priv.iteritems():
+/Users/m0/miniforge3/envs/mambamojb/lib/python3.9/site-packages/DataSynthesizer/ModelInspector.py:85: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for idx, number in dist_synt.iteritems():
+</pre></div>
+</div>
+<img alt="../../_images/SynthNAV0_46_1.png" src="../../_images/SynthNAV0_46_1.png" />
+<img alt="../../_images/SynthNAV0_46_2.png" src="../../_images/SynthNAV0_46_2.png" />
+<img alt="../../_images/SynthNAV0_46_3.png" src="../../_images/SynthNAV0_46_3.png" />
+<img alt="../../_images/SynthNAV0_46_4.png" src="../../_images/SynthNAV0_46_4.png" />
+<img alt="../../_images/SynthNAV0_46_5.png" src="../../_images/SynthNAV0_46_5.png" />
+<img alt="../../_images/SynthNAV0_46_6.png" src="../../_images/SynthNAV0_46_6.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>5.3 compare pairwise mutual information<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inspector</span><span class="o">.</span><span class="n">mutual_information_heatmap</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/SynthNAV0_48_0.png" src="../../_images/SynthNAV0_48_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mf">1..10</span><span class="p">)</span>
+<span class="n">unless</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="n">puts</span> <span class="s2">&quot;#</span><span class="si">{i}</span><span class="s2"> is odd&quot;</span>
+<span class="k">else</span>
+    <span class="n">puts</span> <span class="s2">&quot;#</span><span class="si">{i}</span><span class="s2"> is even&quot;</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_18899/2226457451.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mf">1..10</span><span class="p">)</span>
+                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src/test"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="SyntheticNAV.html" class="btn btn-neutral float-right" title="SyntheticNAV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="notebooks.html" class="btn btn-neutral float-left" title="Content with notebooks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
