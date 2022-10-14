@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>2. Store code outputs and insert into content &mdash; Daniel Mo Houshmand</title>
+  <title>Store code outputs and insert into content &mdash; Daniel Mo Houshmand</title>
   
 
   
@@ -67,8 +67,8 @@ const thebe_selector_output = ".output, .cell_output"
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. EffektTeam Effekt" href="prereq.html" />
-    <link rel="prev" title="1. Welcome to your Jupyter Book" href="intro.html" /> 
+    <link rel="next" title="EffektTeam Effekt" href="prereq.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -118,15 +118,15 @@ const thebe_selector_output = ".output, .cell_output"
             
               <p class="caption" role="heading"><span class="caption-text">Intro</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Welcome to your Jupyter Book</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Store code outputs and insert into content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="prereq.html">3. EffektTeam Effekt</a></li>
-<li class="toctree-l1"><a class="reference internal" href="prereq.html#prerequisites">4. Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Welcome to your Jupyter Book</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Store code outputs and insert into content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prereq.html">EffektTeam Effekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prereq.html#prerequisites">Prerequisites</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Configurations</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="src/intro/0intro.html">5. Introduksjon</a></li>
-<li class="toctree-l1"><a class="reference internal" href="src/intro/setup.html">6. Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src/intro/0intro.html">Introduksjon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src/intro/setup.html">Setup</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Oppfriskning &amp; Oppslag</span></p>
 <ul>
@@ -206,7 +206,7 @@ const thebe_selector_output = ".output, .cell_output"
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">2. </span>Store code outputs and insert into content</li>
+      <li>Store code outputs and insert into content</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -226,7 +226,7 @@ const thebe_selector_output = ".output, .cell_output"
            <div itemprop="articleBody">
             
   <div class="tex2jax_ignore mathjax_ignore section" id="store-code-outputs-and-insert-into-content">
-<span id="content-code-outputs-glue"></span><h1><span class="section-number">2. </span>Store code outputs and insert into content<a class="headerlink" href="#store-code-outputs-and-insert-into-content" title="Permalink to this headline">¶</a></h1>
+<span id="content-code-outputs-glue"></span><h1>Store code outputs and insert into content<a class="headerlink" href="#store-code-outputs-and-insert-into-content" title="Permalink to this headline">¶</a></h1>
 <p>You often wish to run analyses in one notebook and insert them in your
 documents elsewhere. For example, if you’d like to include a figure,
 or if you want to cite an analysis that you have run.</p>
@@ -253,7 +253,7 @@ writing your content, insert the variable into your text by using a
 <p>For more information about roles, see <span class="xref myst"></span>.</p>
 </div>
 <div class="section" id="gluing-variables-in-your-notebook">
-<span id="glue-gluing"></span><h2><span class="section-number">2.1. </span>Gluing variables in your notebook<a class="headerlink" href="#gluing-variables-in-your-notebook" title="Permalink to this headline">¶</a></h2>
+<span id="glue-gluing"></span><h2>Gluing variables in your notebook<a class="headerlink" href="#gluing-variables-in-your-notebook" title="Permalink to this headline">¶</a></h2>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">myst_nb.glue()</span></code> to assign the value of a variable to
 a key of your choice. <code class="docutils literal notranslate"><span class="pre">glue</span></code> will store all of the information that is normally used to <strong>display</strong>
 that variable (i.e., whatever happens when you display the variable by putting it at the end of a
@@ -277,7 +277,7 @@ code cell). Choose a key that you will remember, as you will use it later.</p>
 <code class="docutils literal notranslate"><span class="pre">{glue:}`cool_text`</span></code> to your content results in the
 following: <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">'here</span> <span class="pre">is</span> <span class="pre">some</span> <span class="pre">text!'</span></code></span>.</p>
 <div class="section" id="gluing-numbers-plots-and-tables">
-<h3><span class="section-number">2.1.1. </span>Gluing numbers, plots, and tables<a class="headerlink" href="#gluing-numbers-plots-and-tables" title="Permalink to this headline">¶</a></h3>
+<h3>Gluing numbers, plots, and tables<a class="headerlink" href="#gluing-numbers-plots-and-tables" title="Permalink to this headline">¶</a></h3>
 <p>You can glue anything in your notebook and display it later with <code class="docutils literal notranslate"><span class="pre">{glue:}</span></code>. Here
 we’ll show how to glue and paste <strong>numbers and images</strong>. We’ll simulate some
 data and run a simple bootstrap on it. We’ll hide most of this process below,
@@ -315,13 +315,13 @@ to focus on the glueing part.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.003002610498515
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0004698361476696
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9905326339369425
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9880501551321603
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0154790011365917
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.012816614734734
 </pre></div>
 </div>
 </div>
@@ -400,33 +400,33 @@ use the <code class="docutils literal notranslate"><span class="pre">display=Fal
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.234898</td>
-      <td>2.956237</td>
-      <td>2.847648</td>
+      <td>3.386805</td>
+      <td>2.897177</td>
+      <td>3.088443</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.673615</td>
-      <td>2.981475</td>
-      <td>2.999980</td>
+      <td>2.847377</td>
+      <td>3.098285</td>
+      <td>3.257944</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.739656</td>
-      <td>3.151110</td>
-      <td>2.795629</td>
+      <td>2.944767</td>
+      <td>2.997578</td>
+      <td>2.790158</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.049179</td>
-      <td>3.028319</td>
-      <td>3.019809</td>
+      <td>2.956163</td>
+      <td>2.911256</td>
+      <td>3.332858</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2.968425</td>
-      <td>3.150804</td>
-      <td>2.850645</td>
+      <td>3.069492</td>
+      <td>2.979205</td>
+      <td>3.340269</td>
     </tr>
   </tbody>
 </table>
@@ -441,12 +441,12 @@ you may wish to remove the output here, using the <code class="docutils literal 
 </div>
 </div>
 <div class="section" id="pasting-glued-variables-into-your-page">
-<span id="glue-pasting"></span><h2><span class="section-number">2.2. </span>Pasting glued variables into your page<a class="headerlink" href="#pasting-glued-variables-into-your-page" title="Permalink to this headline">¶</a></h2>
+<span id="glue-pasting"></span><h2>Pasting glued variables into your page<a class="headerlink" href="#pasting-glued-variables-into-your-page" title="Permalink to this headline">¶</a></h2>
 <p>Once you have glued variables to their names, you can then <strong>paste</strong>
 those variables into your text in your book anywhere you like (even on other pages).
 These variables can be pasted using one of the roles or directives in the <code class="docutils literal notranslate"><span class="pre">glue</span></code> <em>family</em>.</p>
 <div class="section" id="the-glue-role-directive">
-<h3><span class="section-number">2.2.1. </span>The <code class="docutils literal notranslate"><span class="pre">glue</span></code> role/directive<a class="headerlink" href="#the-glue-role-directive" title="Permalink to this headline">¶</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">glue</span></code> role/directive<a class="headerlink" href="#the-glue-role-directive" title="Permalink to this headline">¶</a></h3>
 <p>The simplest role and directive is <code class="docutils literal notranslate"><span class="pre">glue:any</span></code>,
 which pastes the glued output in-line or as a block respectively,
 with no additional formatting.
@@ -468,7 +468,7 @@ Simply add this:</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>In-line text; {glue:}`boot_mean`, and a figure: {glue:}`boot_fig`.
 </pre></div>
 </div>
-<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.003002610498515</span></code></span>, and a figure: <span class="pasted-inline"><img alt="_images/overview_10_0.png" src="_images/overview_10_0.png" /></span>.</p>
+<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0004698361476696</span></code></span>, and a figure: <span class="pasted-inline"><img alt="_images/overview_10_0.png" src="_images/overview_10_0.png" /></span>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>We recommend using wider, shorter figures when plotting in-line, with a ratio
@@ -482,7 +482,7 @@ control over how the pasted outputs look in your pages.</p>
 </div>
 </div>
 <div class="section" id="controlling-the-pasted-outputs">
-<h2><span class="section-number">2.3. </span>Controlling the pasted outputs<a class="headerlink" href="#controlling-the-pasted-outputs" title="Permalink to this headline">¶</a></h2>
+<h2>Controlling the pasted outputs<a class="headerlink" href="#controlling-the-pasted-outputs" title="Permalink to this headline">¶</a></h2>
 <p>You can control the pasted outputs by using a sub-command of <code class="docutils literal notranslate"><span class="pre">{glue:}</span></code>. These are used like so:
 <code class="docutils literal notranslate"><span class="pre">{glue:subcommand}`key`</span></code>. These subcommands allow you to control more of the look, feel, and
 content of the pasted output.</p>
@@ -492,14 +492,14 @@ content of the pasted output.</p>
 generic command that doesn’t make many assumptions about what you are gluing.</p>
 </div>
 <div class="section" id="the-glue-text-role">
-<h3><span class="section-number">2.3.1. </span>The <code class="docutils literal notranslate"><span class="pre">glue:text</span></code> role<a class="headerlink" href="#the-glue-text-role" title="Permalink to this headline">¶</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">glue:text</span></code> role<a class="headerlink" href="#the-glue-text-role" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">glue:text</span></code> role is specific to text outputs.
 For example, the following text:</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>The mean of the bootstrapped distribution was {glue:text}`boot_mean` (95% confidence interval {glue:text}`boot_clo`/{glue:text}`boot_chi`).
 </pre></div>
 </div>
 <p>Is rendered as:
-The mean of the bootstrapped distribution was <span class="pasted-text">3.003002610498515</span> (95% confidence interval <span class="pasted-text">2.9905326339369425</span>/<span class="pasted-text">3.0154790011365917</span>)</p>
+The mean of the bootstrapped distribution was <span class="pasted-text">3.0004698361476696</span> (95% confidence interval <span class="pasted-text">2.9880501551321603</span>/<span class="pasted-text">3.012816614734734</span>)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">glue:text</span></code> only works with glued variables that contain a <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> output.</p>
@@ -510,10 +510,10 @@ want to round the results. To add formatting, use this syntax:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">{glue:text}`mykey:formatstring`</span></code></p></li>
 </ul>
-<p>For example, <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">rounded</span> <span class="pre">mean:</span> <span class="pre">{glue:text}`boot_mean:.2f`</span> </code> will be rendered like this: My rounded mean: <span class="pasted-text">3.00</span> (95% CI: <span class="pasted-text">2.99</span>/<span class="pasted-text">3.02</span>).</p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">rounded</span> <span class="pre">mean:</span> <span class="pre">{glue:text}`boot_mean:.2f`</span> </code> will be rendered like this: My rounded mean: <span class="pasted-text">3.00</span> (95% CI: <span class="pasted-text">2.99</span>/<span class="pasted-text">3.01</span>).</p>
 </div>
 <div class="section" id="the-glue-figure-directive">
-<h3><span class="section-number">2.3.2. </span>The <code class="docutils literal notranslate"><span class="pre">glue:figure</span></code> directive<a class="headerlink" href="#the-glue-figure-directive" title="Permalink to this headline">¶</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">glue:figure</span></code> directive<a class="headerlink" href="#the-glue-figure-directive" title="Permalink to this headline">¶</a></h3>
 <p>With <code class="docutils literal notranslate"><span class="pre">glue:figure</span></code> you can apply more formatting to figure-like objects,
 such as giving them a caption and referenceable label. For example,</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{glue:figure} boot_fig
@@ -529,7 +529,7 @@ This is a <span class="gs">**caption**</span>, with an embedded <span class="sb"
 <div class="cell_output docutils container">
 <img alt="_images/overview_10_0.png" src="_images/overview_10_0.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">This is a <strong>caption</strong>, with an embedded <code class="docutils literal notranslate"><span class="pre">{glue:text}</span></code> element: <span class="pasted-text">3.00</span>!</span><a class="headerlink" href="#fig-boot" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">This is a <strong>caption</strong>, with an embedded <code class="docutils literal notranslate"><span class="pre">{glue:text}</span></code> element: <span class="pasted-text">3.00</span>!</span><a class="headerlink" href="#fig-boot" title="Permalink to this image">¶</a></p>
 </div>
 <p>Later, the code</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Here is a {ref}`reference to the figure &lt;fig-boot&gt;`
@@ -575,42 +575,42 @@ A caption for a pandas table.
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.234898</td>
-      <td>2.956237</td>
-      <td>2.847648</td>
+      <td>3.386805</td>
+      <td>2.897177</td>
+      <td>3.088443</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.673615</td>
-      <td>2.981475</td>
-      <td>2.999980</td>
+      <td>2.847377</td>
+      <td>3.098285</td>
+      <td>3.257944</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.739656</td>
-      <td>3.151110</td>
-      <td>2.795629</td>
+      <td>2.944767</td>
+      <td>2.997578</td>
+      <td>2.790158</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.049179</td>
-      <td>3.028319</td>
-      <td>3.019809</td>
+      <td>2.956163</td>
+      <td>2.911256</td>
+      <td>3.332858</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2.968425</td>
-      <td>3.150804</td>
-      <td>2.850645</td>
+      <td>3.069492</td>
+      <td>2.979205</td>
+      <td>3.340269</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
-<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">A caption for a pandas table.</span><a class="headerlink" href="#tbl-df" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A caption for a pandas table.</span><a class="headerlink" href="#tbl-df" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="the-glue-math-directive">
-<h3><span class="section-number">2.3.3. </span>The <code class="docutils literal notranslate"><span class="pre">glue:math</span></code> directive<a class="headerlink" href="#the-glue-math-directive" title="Permalink to this headline">¶</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">glue:math</span></code> directive<a class="headerlink" href="#the-glue-math-directive" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">glue:math</span></code> directive is specific to LaTeX math outputs
 (glued variables that contain a <code class="docutils literal notranslate"><span class="pre">text/latex</span></code> MIME type),
 and works similarly to the <a class="reference external" href="https://www.sphinx-doc.org/en/1.8/usage/restructuredtext/directives.html#math">Sphinx math directive</a>.
@@ -647,10 +647,10 @@ For example, with this code we glue an equation:</p>
 </div>
 </div>
 <div class="section" id="advanced-glue-use-cases">
-<h2><span class="section-number">2.4. </span>Advanced <code class="docutils literal notranslate"><span class="pre">glue</span></code> use-cases<a class="headerlink" href="#advanced-glue-use-cases" title="Permalink to this headline">¶</a></h2>
+<h2>Advanced <code class="docutils literal notranslate"><span class="pre">glue</span></code> use-cases<a class="headerlink" href="#advanced-glue-use-cases" title="Permalink to this headline">¶</a></h2>
 <p>Here are a few more specific and advanced uses of the <code class="docutils literal notranslate"><span class="pre">glue</span></code> submodule.</p>
 <div class="section" id="pasting-into-tables">
-<h3><span class="section-number">2.4.1. </span>Pasting into tables<a class="headerlink" href="#pasting-into-tables" title="Permalink to this headline">¶</a></h3>
+<h3>Pasting into tables<a class="headerlink" href="#pasting-into-tables" title="Permalink to this headline">¶</a></h3>
 <p>In addition to pasting blocks of outputs, or in-line with text, you can also paste directly
 into tables. This allows you to compose complex collections of structured data using outputs
 that were generated in other cells or other notebooks. For example, the following Markdown table:</p>
@@ -672,13 +672,13 @@ that were generated in other cells or other notebooks. For example, the followin
 <tbody>
 <tr class="row-even"><td class="text-align:center"><p>histogram and raw text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="_images/overview_10_0.png" src="_images/overview_10_0.png" /></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.003002610498515</span></code></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.9905326339369425</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0154790011365917</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0004698361476696</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.9880501551321603</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.012816614734734</span></code></span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:center"><p>sorted means and formatted text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="_images/overview_10_1.png" src="_images/overview_10_1.png" /></span></p></td>
-<td><p><span class="pasted-text">3.003</span></p></td>
-<td><p><span class="pasted-text">2.991</span>-<span class="pasted-text">3.015</span></p></td>
+<td><p><span class="pasted-text">3.000</span></p></td>
+<td><p><span class="pasted-text">2.988</span>-<span class="pasted-text">3.013</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -711,8 +711,8 @@ that were generated in other cells or other notebooks. For example, the followin
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="prereq.html" class="btn btn-neutral float-right" title="3. EffektTeam Effekt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="intro.html" class="btn btn-neutral float-left" title="1. Welcome to your Jupyter Book" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prereq.html" class="btn btn-neutral float-right" title="EffektTeam Effekt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="intro.html" class="btn btn-neutral float-left" title="Welcome to your Jupyter Book" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

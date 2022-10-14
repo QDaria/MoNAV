@@ -51,7 +51,7 @@ html:
 #  use_repository_button     : true  # Whether to add a link to your repository button
 #  use_issues_button         : true  # Whether to add an "open an issue" button
 #  use_multitoc_numbering    : true   # Continuous numbering across parts/chapters
-  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
+#  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
   extra_footer              : ""  # Will be displayed underneath the footer.
 #  google_analytics_id       : ""  # A GA id that can be used to track book views.
   home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
@@ -99,10 +99,12 @@ sphinx:
     #html_theme: quantecon_book_theme
     pygments_style: one-dark
     html_title: Daniel Mo Houshmand
-    html_static_path: /Users/m0/Documents/GitHub/MoNAV/_build/html/_static
+    html_static_path: /Users/m0/Documents/GitHub/MoNAV/_static
+    #html_static_path: /_static0
     #/Users/m0/Documents/GitHub/MoNAV/_build/html/index.html
     # CSS files
     html_css_files: custom.css
+    #html_css_files: custom0.css
     # JS files
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js

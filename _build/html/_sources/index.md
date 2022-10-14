@@ -14,6 +14,20 @@ kernelspec:
 ---
 # Intro
 
+
+
+
+````md
+```{nb-exec-table}
+```
+````
+
+which produces:
+
+```{nb-exec-table}
+```
+https://logo.com/
+
 ```python
 import plotly.io as pio
 import plotly.express as px
@@ -24,6 +38,14 @@ fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species", size="s
 fig
 ```
 
+```{code-block} python
+import sympy as sym
+f = sym.Function('f')
+y = sym.Function('y')
+n = sym.symbols(r'\alpha')
+f = y(n)-2*y(n-1/sym.pi)-5*y(n-2)
+glue("sym_eq", sym.rsolve(f,y(n),[1,4]))
+```
 
 `````{tab-set}
 ````{tab-item} python
@@ -90,12 +112,7 @@ a = 1
 b = 2
 c = 1
 ```
-import sympy as sym
-f = sym.Function('f')
-y = sym.Function('y')
-n = sym.symbols(r'\alpha')
-f = y(n)-2*y(n-1/sym.pi)-5*y(n-2)
-glue("sym_eq", sym.rsolve(f,y(n),[1,4]))
+
 
 
 ::::{important}

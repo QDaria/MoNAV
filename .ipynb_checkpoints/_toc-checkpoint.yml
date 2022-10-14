@@ -4,7 +4,7 @@ format: jb-book
 root: index
 parts:
   - caption: Intro
-    numbered: True  # Only applies to chapters in Part 1.
+    #numbered: True  # Only applies to chapters in Part 1.
     chapters:
     - file: intro
     - file: overview
@@ -13,7 +13,7 @@ parts:
       - file: prenb
       - file: ph 
   - caption: Configurations
-    numbered: True   # Only applies to chapters in Part 1.
+    #numbered: True   # Only applies to chapters in Part 1.
     chapters:
     - file: src/intro/0intro
     - file: src/intro/setup

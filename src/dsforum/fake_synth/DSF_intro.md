@@ -14,9 +14,71 @@ kernelspec:
 ---
 # Intro Data Science Forum - Fake & Synthetic Data
 
-![title]("https://mostly.ai/wp-content/uploads/2021/09/MOSTLY-AI_comparison_of_synthetic_data_types_2-1-1024x724.png")
+## Data Masking (Data Maskering)
 
-<img src="https://mostly.ai/wp-content/uploads/2021/09/MOSTLY-AI_comparison_of_synthetic_data_types_2-1-1024x724.png" alt="alternatetext">
+
+Gitt de økende cybertruslene og implementeringen av personvernlovgivning som GDPR i EU eller CCPA i USA, må bedrifter sørge for at private data brukes så lite som mulig. Datamaskering gir en måte å begrense private data på, samtidig som det lar bedrifter teste systemene sine med data så nærme reelle data som mulig.
+
+Den gjennomsnittlige kostnaden for et datainnbrudd ble estimert til 4,24 millioner dollar i 2020, noe som skaper sterke insentiver for bedrifter til å investere i informasjonssikkerhetsløsninger, inkludert datamaskering for å beskytte sensitive data. Datamaskering er en må-ha-løsning for organisasjoner som ønsker å overholde GDPR eller bruke realistiske data i et testmiljø.
+
+I denne artikkelen forklarer vi datamaskering og gir en liste over de beste datamaskeringsteknikkene.
+
+Hva er datamaskering?
+Datamaskering blir også referert til som dataobfuskering, dataanonymisering eller pseudonymisering. Det er prosessen med å erstatte konfidensielle data ved å bruke funksjonelle fiktive data som tegn eller andre data. Hovedformålet med datamaskering er å beskytte sensitiv, privat informasjon i situasjoner der virksomheten deler data med tredjeparter.
+
+Hvorfor er datamaskering viktig nå?
+Antallet datainnbrudd øker hvert år (Sammenlignet med midten av 2018, var antallet registrerte brudd opp 54 % i 2019) Derfor må organisasjoner forbedre sine datasikkerhetssystemer. Behovet for datamaskering øker på grunn av følgende årsaker:
+
+Organisasjoner trenger en kopi av produksjonsdata når de bestemmer seg for å bruke dem for ikke-produksjonsmessige årsaker, for eksempel applikasjonstesting eller forretningsanalysemodellering.
+Foretakets retningslinjer for personvern er også truet av innsidere. Derfor bør organisasjoner fortsatt være forsiktige mens de gir tilgang til innsidemedarbeidere.
+GDPR og CCPA tvinger bedrifter til å styrke databeskyttelsessystemene sine, ellers må organisasjoner betale høye bøter.
+Hvordan fungerer datamaskering?
+Datamaskeringsprosessen er enkel, men den har forskjellige teknikker og typer. Generelt begynner organisasjoner med å identifisere alle sensitive data bedriften din har. Deretter bruker de algoritmer for å maskere sensitive data og erstatte dem med strukturelt identiske, men numerisk forskjellige data. Hva mener vi med strukturelt identiske? For eksempel er passnumre 9 sifre i USA, og enkeltpersoner må vanligvis dele passinformasjonen sin med flyselskaper. Når et flyselskap bygger en modell for å analysere og teste forretningsmiljøet, oppretter de en annen 9-sifret lang pass-ID eller erstatter noen sifre med tegn.
+
+Her er et eksempel på hvordan datamaskering fungerer:
+
+<img src="https://research.aimultiple.com/wp-content/uploads/2020/07/Data-masking-example-2.png" alt="Informatica">
+Hva er teknikkene for datamaskering?
+Det er mange datamaskeringsteknikker. Her gir vi 8 teknikker som vi klassifiserte i henhold til deres brukstilfelle.
+
+Egnet for testdatahåndtering
+Substitusjon
+I substitusjonstilnærmingen, som navnet refererer til, erstatter virksomheter de originale dataene med tilfeldige data fra levert eller tilpasset oppslagsfil. Dette er en effektiv måte å skjule data på siden bedrifter bevarer det autentiske utseendet til data.
+
+Blander
+Blanding er en annen vanlig datamaskeringsmetode. I stokkingsmetoden, akkurat som substitusjon, erstatter bedrifter originaldata med andre data som ser autentisk ut, men de blander enhetene i samme kolonne tilfeldig.
+
+Antall og datoavvik
+For økonomiske og datodrevne datasett endres ikke nøyaktigheten til datasettet når du bruker samme varians for å opprette et nytt datasett mens data maskeres. Å bruke varians for å lage et nytt datasett er også ofte brukt i syntetisk datagenerering. Hvis du planlegger å beskytte personvernet med denne teknikken, anbefaler vi deg å lese vår omfattende veiledning for generering av syntetiske data.
+
+Kryptering
+Kryptering er den mest komplekse datamaskeringsalgoritmen. Brukere kan bare få tilgang til data hvis de har dekrypteringsnøkkelen
+
+<img src="https://research.aimultiple.com/wp-content/uploads/2020/07/Encryption-data-masking.png" alt="alternatetext">
+
+Karakterkryptering
+Denne metoden innebærer å omorganisere rekkefølgen av tegn tilfeldig. Denne prosessen er irreversibel slik at de originale dataene ikke kan hentes fra de krypterte dataene.
+
+Egnet for å dele data med uautoriserte brukere
+Nuller ut eller sletting
+Å erstatte sensitive data med nullverdi er også en tilnærming bedrifter kan foretrekke i deres datamaskeringsarbeid. Selv om det reduserer nøyaktigheten av testresultater som for det meste opprettholdes i andre tilnærminger, er det en enklere tilnærming når virksomheten ikke maskerer på grunn av modellvalideringsformål.
+
+Maskering ut
+I maskeringsmetoden er bare en del av de originale dataene maskert. Det ligner på nulling ut siden det ikke er effektivt i testmiljøet. For eksempel, i netthandel, vises kun de siste 4 sifrene i kredittkortnummeret til kundene for å forhindre svindel.
+
+<img src="https://research.aimultiple.com/wp-content/webp-express/webp-images/uploads/2020/07/data-masking.png.webp" alt="alternatetext">
+
+
+:::{figure-md} markdown-fig
+<img src="../images/sVSm.png" alt="Synthetic VS Masking" class="bg-primary mb-1" width="200px">
+
+This is a caption in **Markdown**!
+:::
+
+
+--- 
+
+<img src="https://research.aimultiple.com/wp-content/uploads/2020/07/Encryption-data-masking.png" alt="alternatetext">
 
 Personvern blir stadig viktigere i dagens samfunn, og med GDPR har betydningen blitt enda større. Dette har ført til et økt behov for generering av syntetisk data for bruk i testing av nye løsninger. Men hva innebærer det egentlig å generere representativ syntetisk data som testere kan bruke, og som er i henhold til personlovgivningen? Kom og hør på vår lyntale om hvordan vi løste denne problemstillingen i  
 Å jobbe med data er vanskelig. Rådata byr vanligvis på flere utfordringer som må løses før du faktisk kan jobbe produktivt med dem. Noen ganger har du ikke nok data eller dataene har hull som må fylles. I mange tilfeller er det dyrt eller vanskelig å skaffe data på grunn av ytre forhold. I tillegg påvirker personvernbestemmelser måtene du kan bruke eller distribuere et datasett på. Av alle disse grunnene er bruk av syntetiske data et godt alternativ, siden det kan oppfylle de samme behovene med liten innsats.
